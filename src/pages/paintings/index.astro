@@ -9,16 +9,6 @@ import picture4 from "../../images/paintings/Picture4.jpg";
 ---
 
 <style>
-    main {
-        margin-inline: auto;
-        text-align: center;
-        display: grid;
-        gap: 4rem;
-        padding: 2rem;
-
-        container-type: inline-size;
-    }
-
     section {
         display: grid;
         grid-template-columns: 1fr;
@@ -27,29 +17,27 @@ import picture4 from "../../images/paintings/Picture4.jpg";
     }
 </style>
 <BaseLayout title="Paintings - HB" description="">
-    <main>
-        <h1>Paintings</h1>
-        <section>
-            <Picture
-                src={picture1}
-                formats={["avif", "webp"]}
-                alt="A description of my image."
-            />
-            <Picture
-                src={picture2}
-                formats={["avif", "webp"]}
-                alt="A description of my image."
-            />
-            <Picture
-                src={picture3}
-                formats={["avif", "webp"]}
-                alt="A description of my image."
-            />
-            <Picture
-                src={picture4}
-                formats={["avif", "webp"]}
-                alt="A description of my image."
-            />
-        </section>
-    </main>
+    <h1>Paintings</h1>
+    <section>
+        <Picture
+            src={picture1}
+            formats={["avif", "webp"]}
+            alt="A description of my image."
+        />
+        <Picture
+            src={picture2}
+            formats={["avif", "webp"]}
+            alt="A description of my image."
+        />
+        <Picture
+            src={picture3}
+            formats={["avif", "webp"]}
+            alt="A description of my image."
+        />
+        <Picture
+            src={picture4}
+            formats={["avif", "webp"]}
+            alt="A description of my image."
+        />
+    </section>
 </BaseLayout>

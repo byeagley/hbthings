@@ -2,22 +2,25 @@
 import "@styles/reset.css";
 import "@styles/global.css";
 import Head from "@components/Head.astro";
-import Navigation from "@components/Navigation.astro";
+import Menu from "@components/Menu.astro";
 const { title, description } = Astro.props;
 ---
 
 <style>
-	.spotlight {
-		inline-size: 100%;
-		font-size: 1.5rem;
+	main {
+		margin-inline: auto;
+		text-align: center;
+		display: grid;
+		gap: 4rem;
+		padding: 2rem;
 	}
 </style>
 <html dir="ltr" lang="en-US">
 	<Head title={title} description={description} />
 	<body>
-		<Navigation>
-			<li class="spotlight"><a href="/hbthings/">HB</a></li>
-		</Navigation>
-		<slot />
+		<main>
+			<Menu />
+			<slot />
+		</main>
 	</body>
 </html>
