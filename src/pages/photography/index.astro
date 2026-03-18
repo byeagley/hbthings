@@ -1,7 +1,79 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import Picture from "astro/components/Picture.astro";
+import picture6 from "../../images/photography/Picture6.jpg";
+import picture7 from "../../images/photography/Picture7.jpg";
+import picture9 from "../../images/photography/Picture9.jpg";
+import picture10 from "../../images/photography/Picture10.jpg";
+import picture11 from "../../images/photography/Picture11.png";
+import picture12 from "../../images/photography/Picture12.png";
+import picture13 from "../../images/photography/Picture13.png";
+import picture14 from "../../images/photography/Picture14.png";
 ---
 
+<style>
+    main {
+        margin-inline: auto;
+        text-align: center;
+        display: grid;
+        gap: 4rem;
+        padding: 2rem;
+
+        container-type: inline-size;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        gap: 4rem;
+    }
+</style>
+
 <BaseLayout title="Photography - HB" description="">
-    <main><h1>Photography</h1></main>
+    <main>
+        <h1>Photography</h1>
+        <section>
+            <Picture
+                src={picture6}
+                formats={["avif", "webp"]}
+                alt="A description of my image."
+            />
+            <Picture
+                src={picture7}
+                formats={["avif", "webp"]}
+                alt="A description of my image."
+            />
+            <Picture
+                src={picture9}
+                formats={["avif", "webp"]}
+                alt="A description of my image."
+            />
+            <Picture
+                src={picture10}
+                formats={["avif", "webp"]}
+                alt="A description of my image."
+            />
+            <Picture
+                src={picture11}
+                formats={["avif", "webp"]}
+                alt="A description of my image."
+            />
+            <Picture
+                src={picture12}
+                formats={["avif", "webp"]}
+                alt="A description of my image."
+            />
+            <Picture
+                src={picture13}
+                formats={["avif", "webp"]}
+                alt="A description of my image."
+            />
+            <Picture
+                src={picture14}
+                formats={["avif", "webp"]}
+                alt="A description of my image."
+            />
+        </section>
+    </main>
 </BaseLayout>
