@@ -1,0 +1,23 @@
+---
+import "@styles/reset.css";
+import "@styles/global.css";
+import Head from "@components/Head.astro";
+import Navigation from "@components/Navigation.astro";
+const { title, description } = Astro.props;
+---
+
+<style>
+	.spotlight {
+		inline-size: 100%;
+		font-size: 1.5rem;
+	}
+</style>
+<html dir="ltr" lang="en-US">
+	<Head title={title} description={description} />
+	<body>
+		<Navigation>
+			<li class="spotlight"><a href="/">Holden Brown</a></li>
+		</Navigation>
+		<slot />
+	</body>
+</html>

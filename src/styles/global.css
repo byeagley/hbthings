@@ -1,0 +1,15 @@
+html {
+    color-scheme: dark light;
+
+    font-family: system-ui;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}

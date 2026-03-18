@@ -1,17 +1,28 @@
 ---
-
+import MainPageLayout from "@layouts/MainPageLayout.astro";
+import Navigation from "@components/Navigation.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<style>
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    main {
+        margin-inline: auto;
+        display: grid;
+        gap: 4rem;
+        padding: 1rem;
+        max-inline-size: 40rem;
+        ul {
+            display: grid;
+            font-size: 2rem;
+            justify-items: end;
+            gap: 0.5rem;
+        }
+    }
+</style>
+
+<MainPageLayout title="Holden Brown" description="">
+    <main><h1>Holden Brown</h1><Navigation /></main>
+</MainPageLayout>
