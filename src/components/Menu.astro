@@ -10,19 +10,24 @@ const { currentLink } = Astro.props;
     ul {
         list-style: none;
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
-        gap: 1rem;
         padding: 0;
+        gap: 0.25rem;
+    }
+
+    li {
+        padding-block: 2px;
+        padding-inline: 0.25rem;
     }
 
     a {
         font-weight: 600;
     }
 
-    .currentLink {
+    li:has(.currentLink) {
         background-color: #fffcf2;
         color: #0e1116;
-        padding: 2px;
     }
 </style>
 
