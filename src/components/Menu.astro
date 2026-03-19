@@ -4,7 +4,7 @@ const { currentLink } = Astro.props;
 
 <style>
     nav {
-        border-block: 1px solid #fffcf2;
+        border-block: 1px solid light-dark(#0e1116, #fffcf2);
         inline-size: 100%;
         margin-block-end: 2rem;
     }
@@ -27,8 +27,8 @@ const { currentLink } = Astro.props;
     }
 
     li:has(.currentLink) {
-        background-color: #fffcf2;
-        color: #0e1116;
+        background-color: light-dark(#0e1116, #fffcf2);
+        color: light-dark(#fffcf2, #0e1116);
     }
 </style>
 

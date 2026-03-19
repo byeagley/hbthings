@@ -1,9 +1,9 @@
 html {
-    color-scheme: dark;
+    color-scheme: dark light;
 
     font-family: var(--font-charter);
-    color: #FFFCF2;
-    background-color: #0E1116;
+    color: light-dark(#0e1116, #fffcf2);
+    background-color: light-dark(#fffcf2, #0e1116);
 }
 
 
