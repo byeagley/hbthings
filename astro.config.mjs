@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import { readFileSync, writeFileSync, readdirSync } from 'fs';
 import { join } from 'path';
 import { fileURLToPath } from 'url';
@@ -30,5 +30,33 @@ function htmlMinifier() {
 export default defineConfig({
     site: 'https://byeagley.github.io',
     base: '/hbthings',
-    integrations: [htmlMinifier()]
+    integrations: [htmlMinifier()],
+    fonts: [{
+    provider: fontProviders.local(),
+    name: "Charter",
+    cssVariable: "--font-charter",
+    options: {
+      variants: [{
+        src: ['./src/fonts/charter_regular.woff2'],
+        weight: '500',
+        style: 'normal'
+      }, {
+        src: ['./src/fonts/charter_bold.woff2'],
+        weight: '700',
+        style: 'normal'
+      }]
+    }
+  }, 
+  {
+    provider: fontProviders.local(),
+    name: "Getai Grotesk Display",
+    cssVariable: "--font-getai",
+    options: {
+      variants: [{
+        src: ['src/fonts/DTGetaiGroteskDisplay-Black.ttf'],
+        weight: '400',
+        style: 'normal'
+      }]
+    }
+  }]
 });
