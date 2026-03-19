@@ -47,16 +47,5 @@ export default defineConfig({
       }]
     }
   }, 
-  {
-    provider: fontProviders.local(),
-    name: "Getai Grotesk Display",
-    cssVariable: "--font-getai",
-    options: {
-      variants: [{
-        src: ['src/fonts/DTGetaiGroteskDisplay-Black.ttf'],
-        weight: '400',
-        style: 'normal'
-      }]
-    }
-  }]
+]
 });
