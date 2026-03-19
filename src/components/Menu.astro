@@ -4,8 +4,9 @@ const { currentLink } = Astro.props;
 
 <style>
     nav {
-        border-block: 3px solid white;
-        padding: 1em;
+        border-block: 1px solid white;
+        padding-block: 1rem;
+        inline-size: 100%;
     }
     ul {
         list-style: none;
@@ -15,8 +16,12 @@ const { currentLink } = Astro.props;
         padding: 0;
     }
 
+    a {
+        font-weight: 600;
+    }
+
     .currentLink {
-        background-color: grey;
+        background-color: rgb(45, 45, 45);
     }
 </style>
 
@@ -32,22 +37,26 @@ const { currentLink } = Astro.props;
         <li>
             <a
                 class:list={[{ currentLink: currentLink === "photography" }]}
-                href="/hbthings/photography">Photography</a>
+                href="/hbthings/photography">Photography</a
+            >
         </li>
         <li>
             <a
                 class:list={[{ currentLink: currentLink === "video" }]}
-                href="/hbthings/video">Video</a>
+                href="/hbthings/video">Video</a
+            >
         </li>
         <li>
             <a
                 class:list={[{ currentLink: currentLink === "projects" }]}
-                href="/hbthings/projects">Projects</a>
+                href="/hbthings/projects">Projects</a
+            >
         </li>
         <li>
             <a
                 class:list={[{ currentLink: currentLink === "poetry" }]}
-                href="/hbthings/poetry">Poetry</a>
+                href="/hbthings/poetry">Poetry</a
+            >
         </li>
     </ul>
 </nav>
