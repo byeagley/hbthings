@@ -1,9 +1,53 @@
-<button popovertarget="menu">HB</button>
-<menu id="menu" popover>
-    <li><a href="/hbthings/">Home</a></li>
-    <li><a href="/hbthings/paintings">Paintings</a></li>
-    <li><a href="/hbthings/photography">Photography</a></li>
-    <li><a href="/hbthings/video">Video</a></li>
-    <li><a href="/hbthings/projects">Projects</a></li>
-    <li><a href="/hbthings/poetry">Poetry</a></li>
-</menu>
+---
+const { currentLink } = Astro.props;
+---
+
+<style>
+    nav {
+        border-block: 3px solid white;
+        padding: 1em;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .currentLink {
+        background-color: grey;
+    }
+</style>
+
+<nav>
+    <ul>
+        <li>
+            <a
+                href="/hbthings/paintings"
+                class:list={[{ currentLink: currentLink === "paintings" }]}
+                >Paintings</a
+            >
+        </li>
+        <li>
+            <a
+                class:list={[{ currentLink: currentLink === "photography" }]}
+                href="/hbthings/photography">Photography</a>
+        </li>
+        <li>
+            <a
+                class:list={[{ currentLink: currentLink === "video" }]}
+                href="/hbthings/video">Video</a>
+        </li>
+        <li>
+            <a
+                class:list={[{ currentLink: currentLink === "projects" }]}
+                href="/hbthings/projects">Projects</a>
+        </li>
+        <li>
+            <a
+                class:list={[{ currentLink: currentLink === "poetry" }]}
+                href="/hbthings/poetry">Poetry</a>
+        </li>
+    </ul>
+</nav>

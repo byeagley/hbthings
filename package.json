@@ -14,5 +14,8 @@
   "dependencies": {
     "@astrojs/ts-plugin": "^1.10.7",
     "astro": "^6.0.5"
+  },
+  "devDependencies": {
+    "html-minifier-next": "^5.2.1"
   }
 }

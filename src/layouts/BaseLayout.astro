@@ -3,7 +3,8 @@ import "@styles/reset.css";
 import "@styles/global.css";
 import Head from "@components/Head.astro";
 import Menu from "@components/Menu.astro";
-const { title, description } = Astro.props;
+import Name from "@components/Name.astro";
+const { title, description, currentLink } = Astro.props;
 ---
 
 <style>
@@ -11,15 +12,20 @@ const { title, description } = Astro.props;
 		margin-inline: auto;
 		text-align: center;
 		display: grid;
-		gap: 4rem;
-		padding: 2rem;
+		justify-items: center;
+		gap: 1rem;
+	}
+
+	main:first-child {
+		padding: 1rem;
 	}
 </style>
 <html dir="ltr" lang="en-US">
 	<Head title={title} description={description} />
 	<body>
 		<main>
-			<Menu />
+			<Name />
+			<Menu currentLink={currentLink} />
 			<slot />
 		</main>
 	</body>
