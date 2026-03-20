@@ -37,10 +37,7 @@
 		block-size: auto;
 	}
 
-	iframe {
-		display: block;
-		max-inline-size: 100%;
-	}
+
 
 	svg {
 		max-inline-size: 100%;
