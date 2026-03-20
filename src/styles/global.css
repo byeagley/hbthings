@@ -17,3 +17,9 @@ a:visited {
     text-decoration: none;
     color: inherit;
 }
+
+lite-youtube {
+    aspect-ratio: 1.3328;
+    inline-size: 100%;
+    block-size: auto;
+}
