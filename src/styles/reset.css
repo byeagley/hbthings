@@ -1,4 +1,5 @@
 @layer {
+
 	*,
 	*::before,
 	*::after {
@@ -28,13 +29,17 @@
 	}
 
 	img,
-	iframe,
-	audio,
 	video,
+	audio,
 	canvas {
 		display: block;
 		max-inline-size: 100%;
 		block-size: auto;
+	}
+
+	iframe {
+		display: block;
+		max-inline-size: 100%;
 	}
 
 	svg {

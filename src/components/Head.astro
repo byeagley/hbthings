@@ -10,5 +10,11 @@ const { title, description } = Astro.props;
 	<meta name="author" content="Ben Yeagley" />
 	<meta name="description" content={description} />
 	<meta name="generator" content={Astro.generator} />
+	<link
+		rel="stylesheet"
+		href="../../node_modules/lite-youtube-embed/src/lite-yt-embed.css"
+	/>
+	<script src="../../node_modules/lite-youtube-embed/src/lite-yt-embed.js"
+	></script>
 	<title>{title}</title>
 </head>
