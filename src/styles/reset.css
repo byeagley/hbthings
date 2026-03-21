@@ -30,14 +30,13 @@
 
 	img,
 	video,
+	iframe,
 	audio,
 	canvas {
 		display: block;
 		max-inline-size: 100%;
 		block-size: auto;
 	}
-
-
 
 	svg {
 		max-inline-size: 100%;

@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@astrojs/ts-plugin": "^1.10.7",
-    "astro": "^6.0.5",
-    "lite-youtube-embed": "^0.3.4"
+    "@justinribeiro/lite-youtube": "^1.9.0",
+    "astro": "^6.0.5"
   },
   "devDependencies": {
     "html-minifier-next": "^5.2.1"
