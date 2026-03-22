@@ -5,13 +5,16 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 <style>
     article {
         display: grid;
-        gap: 10rem;
+        justify-content: center;
+
     }
     figure {
         text-align: start;
 
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 1rem;
+        min-block-size: 100vb;
     }
 
     figcaption {
