@@ -23,7 +23,7 @@ img {
     object-fit: contain;
 }
 
-main {
+main:has(.poems) {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y proximity;
