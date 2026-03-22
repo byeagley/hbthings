@@ -6,7 +6,6 @@ import BaseLayout from "@layouts/BaseLayout.astro";
     article {
         display: grid;
         justify-content: center;
-
     }
     figure {
         text-align: start;
@@ -17,12 +16,12 @@ import BaseLayout from "@layouts/BaseLayout.astro";
         min-block-size: 100vb;
     }
 
-    figcaption {
-        font-weight: bold;
+    figure:not(:first-child) {
+        justify-content: center;
     }
 
-    p {
-        text
+    figcaption {
+        font-weight: bold;
     }
 </style>
 
@@ -49,7 +48,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
                 Physical freedom is limited with life 360,<br />
                 Quietly trying drugs to feel something while<br />
                 Ranking girls on the internet<br />
-                Sexualizes adolescents with no retribution for<br>
+                Sexualizes adolescents with no retribution for<br />
                 Those hiding behind their screens,<br />
                 Under one nation that's forced to pick a side<br />
                 Validating an altered perception<br />
@@ -62,8 +61,10 @@ import BaseLayout from "@layouts/BaseLayout.astro";
         <figure>
             <figcaption>Eye Contact</figcaption>
             <p>
-                My Dad taught me to always look a man in his eye when he spoke<br />
-                He said, “Holden look me in the eye and show me some respect”<br />
+                My Dad taught me to always look a man in his eye when he spoke<br
+                />
+                He said, “Holden look me in the eye and show me some respect”<br
+                />
                 But what if the man's not looking back, I often thought
             </p>
             <p>
@@ -77,8 +78,10 @@ import BaseLayout from "@layouts/BaseLayout.astro";
                 God forbid the judgment of another wandering eye
             </p>
             <p>
-                Yet we walk past souls everyday as though their eyes aren't ours<br />
-                Like if I looked, and you looked too, something might just happen<br />
+                Yet we walk past souls everyday as though their eyes aren't ours<br
+                />
+                Like if I looked, and you looked too, something might just happen<br
+                />
                 Something more, something, something like love
             </p>
             <p>
@@ -87,7 +90,8 @@ import BaseLayout from "@layouts/BaseLayout.astro";
                 And to keep looking
             </p>
             <p>
-                With 8 billion people in the world, how many can you look at?<br />
+                With 8 billion people in the world, how many can you look at?<br
+                />
                 But more importantly how many can look back at you?
             </p>
         </figure>
@@ -160,7 +164,5 @@ import BaseLayout from "@layouts/BaseLayout.astro";
                 Nailing the complexion within
             </p>
         </figure>
-
     </article>
 </BaseLayout>
-
