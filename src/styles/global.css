@@ -17,3 +17,14 @@ a:visited {
     text-decoration: none;
     color: inherit;
 }
+
+img {
+    max-block-size: 800px;
+    object-fit: contain;
+}
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+}
