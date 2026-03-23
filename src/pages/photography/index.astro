@@ -1,14 +1,15 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Picture from "astro/components/Picture.astro";
-import picture6 from "../../images/photography/Picture6.jpg";
-import picture7 from "../../images/photography/Picture7.jpg";
-import picture9 from "../../images/photography/Picture9.jpg";
-import picture10 from "../../images/photography/Picture10.jpg";
-import picture11 from "../../images/photography/Picture11.png";
-import picture12 from "../../images/photography/Picture12.png";
-import picture13 from "../../images/photography/Picture13.png";
-import picture14 from "../../images/photography/Picture14.png";
+
+const images = Object.values(
+    import.meta.glob<{ default: ImageMetadata }>(
+        "../../../src/images/photography/*",
+        {
+            eager: true,
+        },
+    ),
+).map((file) => file.default);
 ---
 
 <style>
@@ -22,45 +23,10 @@ import picture14 from "../../images/photography/Picture14.png";
 
 <BaseLayout title="Photography - HB" description="" currentLink="photography">
     <section>
-        <Picture
-            src={picture6}
-            formats={["avif", "webp"]}
-            alt="A description of my image."
-        />
-        <Picture
-            src={picture7}
-            formats={["avif", "webp"]}
-            alt="A description of my image."
-        />
-        <Picture
-            src={picture9}
-            formats={["avif", "webp"]}
-            alt="A description of my image."
-        />
-        <Picture
-            src={picture10}
-            formats={["avif", "webp"]}
-            alt="A description of my image."
-        />
-        <Picture
-            src={picture11}
-            formats={["avif", "webp"]}
-            alt="A description of my image."
-        />
-        <Picture
-            src={picture12}
-            formats={["avif", "webp"]}
-            alt="A description of my image."
-        />
-        <Picture
-            src={picture13}
-            formats={["avif", "webp"]}
-            alt="A description of my image."
-        />
-        <Picture
-            src={picture14}
-            formats={["avif", "webp"]}
-            alt="A description of my image."
-        />
+        {
+            images.map((img) => (
+                <Picture src={img} alt="A description of my image" />
+            ))
+        }
     </section>
 </BaseLayout>
