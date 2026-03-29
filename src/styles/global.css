@@ -28,3 +28,7 @@ main:has(.poems) {
     overflow-y: scroll;
     scroll-snap-type: y proximity;
 }
+
+.flow>*+* {
+    margin-top: var(--flow-space, 1em);
+}

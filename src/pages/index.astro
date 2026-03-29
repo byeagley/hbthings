@@ -1,28 +1,57 @@
 ---
-import MainPageLayout from "@layouts/MainPageLayout.astro";
-import Navigation from "@components/Navigation.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 ---
 
 <style>
-    h1 {
-        font-size: 3rem;
-        text-align: center;
-    }
-    main {
-        margin-inline: auto;
-        display: grid;
-        gap: 4rem;
-        padding: 1rem;
-        max-inline-size: 40rem;
-        ul {
-            display: grid;
-            font-size: 2rem;
-            justify-items: end;
-            gap: 0.5rem;
-        }
+    article {
+        text-align: start;
+        padding-inline: 1rem;
     }
 </style>
-
-<MainPageLayout title="Holden Brown" description="">
-    <main><h1>Holden Brown</h1><Navigation /></main>
-</MainPageLayout>
+<BaseLayout title="Holden Brown" description="">
+    <article class="flow">
+        <p>
+            I’m Holden Brown, an artist and documentary filmmaker whose work
+            explores human connection through art, memory, and presence. My
+            practice spans a wide range of mediums including ceramics, painting,
+            poetry, drawing, photography, video, production, sewing, and
+            knitting. I approach creation as a creative individual rather than
+            being confined to a single discipline, allowing each idea to take
+            the form it naturally calls for. I earned my undergraduate degree
+            from the University of Virginia, where I began developing my
+            interest in visual storytelling and the relationship between
+            identity and representation. I am currently completing my Master’s
+            degree in documentary production at Indiana University, where my
+            work has become increasingly focused on experimental forms and
+            personal narrative structures.
+        </p>
+        <p>
+            My practice exists at the intersection of documentary and art. I am
+            less interested in traditional, polished narratives and more drawn
+            to work that feels immediate, work that acknowledges the presence of
+            both the subject and the creator. Across mediums, I aim to create
+            pieces that foster connection between subject and viewer, and
+            between the viewer and themselves.
+        </p>
+        <p>
+            Much of my recent work explores how connection is formed,
+            remembered, and expressed. Through projects centered on intimate
+            storytelling and personal experience, I examine how people relate to
+            one another and to their own sense of self. These works often strip
+            away excess context, including faces, environments, and linear
+            timelines, in order to focus attention on what is most essential.
+        </p>
+        <p>
+            This website functions as both a portfolio and an evolving record of
+            that process. It is not meant to present a finished version of
+            myself or my work, but rather to document an ongoing exploration
+            shaped by experimentation, repetition, and a commitment to honesty
+            over perfection.
+        </p>
+        <p>
+            Ultimately, my goal is not just to create work that is seen, but
+            work that creates a sense of connection, something that lingers even
+            after the moment has passed.
+        </p>
+    </article>
+</BaseLayout>
