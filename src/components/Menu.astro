@@ -11,9 +11,10 @@ const { currentLink } = Astro.props;
     ul {
         list-style: none;
         display: flex;
-        justify-content: space-between;
+        gap: 0.5rem;
         flex-wrap: wrap;
         padding: 0;
+        justify-content: center;
     }
 
     li {
@@ -35,6 +36,12 @@ const { currentLink } = Astro.props;
     <ul>
         <li>
             <a
+                href="/hbthings"
+                class:list={[{ currentLink: currentLink === "/" }]}>Intro</a
+            >
+        </li>
+        <li>
+            <a
                 href="/hbthings/artwork"
                 class:list={[{ currentLink: currentLink === "artwork" }]}
                 >Artwork</a
@@ -54,14 +61,23 @@ const { currentLink } = Astro.props;
         </li>
         <li>
             <a
-                class:list={[{ currentLink: currentLink === "projects" }]}
-                href="/hbthings/projects">Projects</a
+                class:list={[{ currentLink: currentLink === "client-work" }]}
+                href="/hbthings/client-work">Client Work</a
             >
         </li>
         <li>
             <a
                 class:list={[{ currentLink: currentLink === "poetry" }]}
                 href="/hbthings/poetry">Poetry</a
+            >
+        </li>
+        <li>
+            <a
+                class:list={[
+                    { currentLink: currentLink === "a-physical-body-of-work" },
+                ]}
+                href="/hbthings/a-physical-body-of-work"
+                >A Physical Body of work</a
             >
         </li>
     </ul>
