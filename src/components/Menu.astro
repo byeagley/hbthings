@@ -3,82 +3,79 @@ const { currentLink } = Astro.props;
 ---
 
 <style>
-    nav {
-        border-block: 1px solid light-dark(#0e1116, #fffcf2);
-        inline-size: 100%;
-        margin-block-end: 2rem;
-    }
-    ul {
-        list-style: none;
-        display: flex;
-        gap: 0.5rem;
-        flex-wrap: wrap;
-        padding: 0;
-        justify-content: center;
-    }
+nav {
+	border-block: 1px solid light-dark(#0e1116, #fffcf2);
+	inline-size: 100%;
+	margin-block-end: 2rem;
+}
+ul {
+	list-style: none;
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	padding: 0;
+	justify-content: center;
+}
 
-    li {
-        padding-block: 2px;
-        padding-inline: 0.5rem;
-    }
+li {
+	padding-block: 2px;
+	padding-inline: 0.5rem;
+}
 
-    a {
-        font-weight: 600;
-    }
+a {
+	font-weight: 600;
+}
 
-    li:has(.currentLink) {
-        background-color: light-dark(#0e1116, #fffcf2);
-        color: light-dark(#fffcf2, #0e1116);
-    }
+li:has(.currentLink) {
+	background-color: light-dark(#0e1116, #fffcf2);
+	color: light-dark(#fffcf2, #0e1116);
+}
 </style>
 
 <nav>
-    <ul>
-        <li>
-            <a
-                href="/hbthings"
-                class:list={[{ currentLink: currentLink === "/" }]}>Intro</a
-            >
-        </li>
-        <li>
-            <a
-                href="/hbthings/artwork"
-                class:list={[{ currentLink: currentLink === "artwork" }]}
-                >Artwork</a
-            >
-        </li>
-        <li>
-            <a
-                class:list={[{ currentLink: currentLink === "photography" }]}
-                href="/hbthings/photography">Photography</a
-            >
-        </li>
-        <li>
-            <a
-                class:list={[{ currentLink: currentLink === "video" }]}
-                href="/hbthings/video">Video</a
-            >
-        </li>
-        <li>
-            <a
-                class:list={[{ currentLink: currentLink === "client-work" }]}
-                href="/hbthings/client-work">Client Work</a
-            >
-        </li>
-        <li>
-            <a
-                class:list={[{ currentLink: currentLink === "poetry" }]}
-                href="/hbthings/poetry">Poetry</a
-            >
-        </li>
-        <li>
-            <a
-                class:list={[
+	<ul>
+		<li>
+			<a href="/" class:list={[{ currentLink: currentLink === "/" }]}>Intro</a>
+		</li>
+		<li>
+			<a
+				href="/artwork"
+				class:list={[{ currentLink: currentLink === "artwork" }]}
+				>Artwork</a
+			>
+		</li>
+		<li>
+			<a
+				class:list={[{ currentLink: currentLink === "photography" }]}
+				href="/photography"
+				>Photography</a
+			>
+		</li>
+		<li>
+			<a class:list={[{ currentLink: currentLink === "video" }]} href="/video"
+				>Video</a
+			>
+		</li>
+		<li>
+			<a
+				class:list={[{ currentLink: currentLink === "client-work" }]}
+				href="/client-work"
+				>Client Work</a
+			>
+		</li>
+		<li>
+			<a class:list={[{ currentLink: currentLink === "poetry" }]} href="/poetry"
+				>Poetry</a
+			>
+		</li>
+		<li>
+			<a
+				class:list={[
                     { currentLink: currentLink === "a-physical-body-of-work" },
                 ]}
-                href="/hbthings/a-physical-body-of-work"
-                >A Physical Body of work</a
-            >
-        </li>
-    </ul>
+				href="/a-physical-body-of-work"
+				>A Physical Body of work</a
+			>
+		</li>
+	</ul>
 </nav>

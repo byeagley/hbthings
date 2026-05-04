@@ -1,5 +1,5 @@
 html {
-	color-scheme: dark light;
+	color-scheme: light;
 
 	font-family: var(--font-charter);
 	color: light-dark(#0e1116, #fffcf2);
@@ -33,4 +33,11 @@ main:has(.poems) {
 
 p {
 	max-inline-size: 70ch;
+}
+
+.photography {
+   	display: grid;
+	grid-template-columns: 1fr;
+	place-items: center;
+	gap: 4rem;
 }

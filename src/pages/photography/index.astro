@@ -3,30 +3,21 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import Picture from "astro/components/Picture.astro";
 
 const images = Object.values(
-    import.meta.glob<{ default: ImageMetadata }>(
-        "../../../src/images/photography/*",
-        {
-            eager: true,
-        },
-    ),
+	import.meta.glob<{ default: ImageMetadata }>(
+		"../../../src/images/photography/*",
+		{
+			eager: true,
+		},
+	),
 ).map((file) => file.default);
 ---
 
-<style>
-    section {
-        display: grid;
-        grid-template-columns: 1fr;
-        place-items: center;
-        gap: 4rem;
-    }
-</style>
+
 
 <BaseLayout title="Photography - HB" description="" currentLink="photography">
-    <section>
-        {
-            images.map((img) => (
-                <Picture src={img} alt="A description of my image" />
-            ))
-        }
-    </section>
+    <section class="photography">
+		{images.map((img, index) => (
+                <Picture src={img} alt="Photo by Holden Brown" priority={index===0}/>
+            ))}
+	</section>
 </BaseLayout>
