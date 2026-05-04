@@ -1,34 +1,36 @@
 html {
-    color-scheme: dark light;
+	color-scheme: dark light;
 
-    font-family: var(--font-charter);
-    color: light-dark(#0e1116, #fffcf2);
-    background-color: light-dark(#fffcf2, #0e1116);
+	font-family: var(--font-charter);
+	color: light-dark(#0e1116, #fffcf2);
+	background-color: light-dark(#fffcf2, #0e1116);
 }
 
-
-
 @view-transition {
-    navigation: auto;
+	navigation: auto;
 }
 
 a,
 a:visited {
-    text-decoration: none;
-    color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 img {
-    max-block-size: 800px;
-    object-fit: contain;
+	max-block-size: 800px;
+	object-fit: contain;
 }
 
 main:has(.poems) {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y proximity;
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y proximity;
 }
 
-.flow>*+* {
-    margin-top: var(--flow-space, 1em);
+.flow > * + * {
+	margin-top: var(--flow-space, 1em);
+}
+
+p {
+	max-inline-size: 70ch;
 }

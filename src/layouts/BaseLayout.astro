@@ -8,15 +8,14 @@ const { title, description, currentLink } = Astro.props;
 ---
 
 <style>
-	main {
-		margin-inline: auto;
-		text-align: center;
-		display: grid;
-	}
+main {
+	margin-inline: auto;
+	display: grid;
+}
 
-	main:first-child {
-		padding: 1rem;
-	}
+main:first-child {
+	padding: 1rem;
+}
 </style>
 <html dir="ltr" lang="en-US">
 	<Head title={title} description={description} />
